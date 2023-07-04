@@ -3,6 +3,7 @@ package com.master.amsterdam.model;
 import com.master.amsterdam.util.Role;
 import jakarta.annotation.PostConstruct;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,17 +52,6 @@ public class PathPattern {
 
     public static String AUTH = "/auth";
     public static String LOGOUT = "/auth/logout";
-
-    public static Map<Role, List<String>> allowedMethodsPerRole = ofEntries(
-            entry(Role.USER, List.of(REGISTER, REGISTER_PATH_VARAIBLE)),
-            entry(Role.ADMIN, List.of("pera kvrzica"))
-    );
-
-    @PostConstruct
-    public void initMethodsWithRoles() {
-
-
-    }
 
 
 }
