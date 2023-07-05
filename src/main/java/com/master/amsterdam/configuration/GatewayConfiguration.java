@@ -30,8 +30,29 @@ public class GatewayConfiguration {
 
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.REGISTER, uriBean.getIstanbulURI(),
                  HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.CREATE_REGISTRATION_REQUEST, uriBean.getIstanbulURI(),
+                HttpMethod.POST, HttpMethod.OPTIONS);
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.REGISTER_PATH_VARAIBLE, uriBean.getIstanbulURI(),
                  HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.REGISTER_PATH_VARAIBLE, uriBean.getIstanbulURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER, uriBean.getIstanbulURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_PATH_VARIABLE, uriBean.getIstanbulURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_PATH_VARIABLE, uriBean.getIstanbulURI(),
+                HttpMethod.PUT, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_ACTIVATE, uriBean.getIstanbulURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_DEACTIVATE, uriBean.getIstanbulURI(),
+                HttpMethod.DELETE, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_ROLE, uriBean.getIstanbulURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.USER_PASSWORD, uriBean.getIstanbulURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+
+
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.AUTH, uriBean.getAlexandriaURI(),
                  HttpMethod.POST, HttpMethod.OPTIONS);
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.LOGOUT, uriBean.getAlexandriaURI(),

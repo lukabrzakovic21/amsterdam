@@ -49,6 +49,14 @@ public class PathPattern {
 
     public static String REGISTER = "/register";
     public static String REGISTER_PATH_VARAIBLE = "/register/*";
+    public static String CREATE_REGISTRATION_REQUEST = "/register/create";
+    public static String USER = "/user";
+    public static String USER_PATH_VARIABLE = "/user/*";
+    public static String USER_ACTIVATE = "/user/activate/*";
+    public static String USER_DEACTIVATE = "/user/deactivate/*";
+    public static String USER_ROLE = "/user/role/*";
+    public static String USER_PASSWORD = "/user/password/*";
+
 
     public static String AUTH = "/auth";
     public static String LOGOUT = "/auth/logout";

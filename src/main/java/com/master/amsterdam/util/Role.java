@@ -1,8 +1,9 @@
 package com.master.amsterdam.util;
 
 public enum Role {
-    USER,
-    ADMIN;
+    ADMIN,
+    CUSTOMER,
+    VENDOR;
 
     public static Role fromString(String role) {
         return valueOf(role.toUpperCase());

@@ -2,7 +2,6 @@ package com.master.amsterdam.configuration;
 
 import com.google.common.base.Strings;
 import com.master.amsterdam.exception.UnauthorizedException;
-import com.master.amsterdam.model.OpenEndpoints;
 import com.master.amsterdam.util.JwtCache;
 import com.master.amsterdam.util.JwtUtil;
 import com.master.amsterdam.util.MethodDecisioner;
@@ -16,6 +15,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import static com.master.amsterdam.util.MethodDecisioner.OpenEndpoints.CREATE_REGISTRATION_REQUEST;
+import static com.master.amsterdam.util.MethodDecisioner.OpenEndpoints.LOGOUT;
+import static com.master.amsterdam.util.MethodDecisioner.OpenEndpoints.LOGIN;
 
 @Component
 public class AuthenticationFilter implements GatewayFilter {
@@ -35,7 +37,7 @@ public class AuthenticationFilter implements GatewayFilter {
         var request = exchange.getRequest();
         var method = request.getPath();
 
-        if(OpenEndpoints.LOGIN.equalsIgnoreCase(method.value())) {
+        if(LOGIN.equalsIgnoreCase(method.value()) || CREATE_REGISTRATION_REQUEST.equalsIgnoreCase(method.value())) {
             logger.info("Entering into open endpoint");
             return chain.filter(exchange);
         }
@@ -52,7 +54,7 @@ public class AuthenticationFilter implements GatewayFilter {
         var authorizationHeader = authorizationHeaderList.get(0);
         String token = authorizationHeader.replace("Bearer ", "");
 
-        if(OpenEndpoints.LOGOUT.equalsIgnoreCase(method.value())) {
+        if(LOGOUT.equalsIgnoreCase(method.value())) {
             jwtCache.invalidateEntry(token);
             return chain.filter(exchange);
         }
