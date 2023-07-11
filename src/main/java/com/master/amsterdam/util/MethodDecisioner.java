@@ -44,13 +44,11 @@ public class MethodDecisioner {
         listForAdmin.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
 
 
-        listForCustomer.add(new MethodPair(PathPattern.REGISTER_PATH_VARAIBLE, "GET"));
         listForCustomer.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "GET"));
         listForCustomer.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "PUT"));
         listForCustomer.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
 
 
-        listForVendor.add(new MethodPair(PathPattern.REGISTER_PATH_VARAIBLE, "GET"));
         listForVendor.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "GET"));
         listForVendor.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "PUT"));
         listForVendor.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
