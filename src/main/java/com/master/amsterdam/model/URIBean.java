@@ -4,10 +4,12 @@ public class URIBean {
 
     private final String istanbulURI;
     private final String alexandriaURI;
+    private final String milanoURI;
 
-    public URIBean(String istanbulURI, String alexandriaURI) {
+    public URIBean(String istanbulURI, String alexandriaURI, String milanoURI) {
         this.istanbulURI = istanbulURI;
         this.alexandriaURI = alexandriaURI;
+        this.milanoURI = milanoURI;
     }
 
     public String getAlexandriaURI() {
@@ -16,5 +18,9 @@ public class URIBean {
 
     public String getIstanbulURI() {
         return istanbulURI;
+    }
+
+    public String getMilanoURI() {
+        return milanoURI;
     }
 }

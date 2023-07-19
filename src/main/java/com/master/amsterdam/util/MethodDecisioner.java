@@ -42,16 +42,50 @@ public class MethodDecisioner {
         listForAdmin.add(new MethodPair(PathPattern.USER_DEACTIVATE, "DELETE"));
         listForAdmin.add(new MethodPair(PathPattern.USER_ROLE, "PATCH"));
         listForAdmin.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
+        listForAdmin.add(new MethodPair(PathPattern.INVOICE_CREATE, "POST"));
+        listForAdmin.add(new MethodPair(PathPattern.INVOICE_PATH_VARIABLE, "GET"));
+        listForAdmin.add(new MethodPair(PathPattern.INVOICE_INCREASE, "PATCH"));
+        listForAdmin.add(new MethodPair(PathPattern.INVOICE_WITHDRAW, "PATCH"));
+        listForAdmin.add(new MethodPair(PathPattern.ITEM_CREATE, "POST"));
+        listForAdmin.add(new MethodPair(PathPattern.ITEM_PATH_VARIABLE, "GET"));
+        listForAdmin.add(new MethodPair(PathPattern.REMOVE_TEMP_PATH_VARIABLE, "DELETE"));
+        listForAdmin.add(new MethodPair(PathPattern.REMOVE_PERM_PATH_VARIABLE, "DELETE"));
+        listForAdmin.add(new MethodPair(PathPattern.ITEM, "GET"));
+
+
+
 
 
         listForCustomer.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "GET"));
         listForCustomer.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "PUT"));
         listForCustomer.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
+        listForCustomer.add(new MethodPair(PathPattern.INVOICE_PATH_VARIABLE, "GET"));
+        listForCustomer.add(new MethodPair(PathPattern.INVOICE_INCREASE, "PATCH"));
+        listForCustomer.add(new MethodPair(PathPattern.INVOICE_WITHDRAW, "PATCH"));
+        listForCustomer.add(new MethodPair(PathPattern.ITEM_PATH_VARIABLE, "GET"));
+        listForCustomer.add(new MethodPair(PathPattern.BUY_ITEM_PATH_VARIABLE, "POST"));
+        listForCustomer.add(new MethodPair(PathPattern.ITEM_HISTORY_PATH_VARIABLE, "GET"));
+        listForCustomer.add(new MethodPair(PathPattern.ITEM_INTEREST_PATH_VARIABLE, "POST"));
+        listForCustomer.add(new MethodPair(PathPattern.ITEM, "GET"));
+
+
 
 
         listForVendor.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "GET"));
         listForVendor.add(new MethodPair(PathPattern.USER_PATH_VARIABLE, "PUT"));
         listForVendor.add(new MethodPair(PathPattern.USER_PASSWORD, "PATCH"));
+        listForVendor.add(new MethodPair(PathPattern.INVOICE_PATH_VARIABLE, "GET"));
+        listForVendor.add(new MethodPair(PathPattern.INVOICE_INCREASE, "PATCH"));
+        listForVendor.add(new MethodPair(PathPattern.INVOICE_WITHDRAW, "PATCH"));
+        listForVendor.add(new MethodPair(PathPattern.ITEM_CREATE, "POST"));
+        listForVendor.add(new MethodPair(PathPattern.ITEM_PATH_VARIABLE, "GET"));
+        listForVendor.add(new MethodPair(PathPattern.REMOVE_TEMP_PATH_VARIABLE, "DELETE"));
+        listForVendor.add(new MethodPair(PathPattern.REMOVE_PERM_PATH_VARIABLE, "DELETE"));
+        listForVendor.add(new MethodPair(PathPattern.ITEM_PATH_VARIABLE, "PATCH"));
+        listForVendor.add(new MethodPair(PathPattern.ITEM, "GET"));
+
+
+
 
         allowedMethodsWithTypePerRole.put(Role.CUSTOMER, listForCustomer);
         allowedMethodsWithTypePerRole.put(Role.VENDOR, listForVendor);

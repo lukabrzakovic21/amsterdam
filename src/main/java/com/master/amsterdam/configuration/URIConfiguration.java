@@ -14,9 +14,12 @@ public class URIConfiguration {
     @Value("${uris.alexandria}")
     private String alexandriaURI;
 
+    @Value("${uris.milano}")
+    private String milanoURI;
+
     @Bean
     public URIBean uriBean() {
-        return new URIBean(istanbulURI, alexandriaURI);
+        return new URIBean(istanbulURI, alexandriaURI, milanoURI);
     }
 
 }

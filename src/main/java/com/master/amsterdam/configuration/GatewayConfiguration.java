@@ -53,6 +53,34 @@ public class GatewayConfiguration {
                 HttpMethod.PATCH, HttpMethod.OPTIONS);
 
 
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.INVOICE_CREATE, uriBean.getMilanoURI(),
+                HttpMethod.POST, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.INVOICE_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.INVOICE_INCREASE, uriBean.getMilanoURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.INVOICE_WITHDRAW, uriBean.getMilanoURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM, uriBean.getMilanoURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM_CREATE, uriBean.getMilanoURI(),
+                HttpMethod.POST, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.PATCH, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.REMOVE_TEMP_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.DELETE, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.REMOVE_PERM_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.DELETE, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.BUY_ITEM_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.POST, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM_INTEREST_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.POST, HttpMethod.OPTIONS);
+        RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.ITEM_HISTORY_PATH_VARIABLE, uriBean.getMilanoURI(),
+                HttpMethod.GET, HttpMethod.OPTIONS);
+
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.AUTH, uriBean.getAlexandriaURI(),
                  HttpMethod.POST, HttpMethod.OPTIONS);
         RouteBuilder.buildRoute(routeBuilder, authenticationFilter,  PathPattern.LOGOUT, uriBean.getAlexandriaURI(),
