@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.master.amsterdam</groupId>
-    <artifactId>api-gateway</artifactId>
+    <artifactId>amsterdam</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>amsterdam</name>
     <description>API Gateway for the whole application</description>
