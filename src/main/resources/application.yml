@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT}
+  error:
+    include-message: always
+
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: true
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: ${cors}
+            allowedMethods: "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+            allowedHeaders: "Origin, Content-Type, X-Requested-With, authorization"
+
+
+
+uris:
+  istanbul:  ${ISTANBUL_URI}
+  alexandria: ${ALEXANDRIA_URI}
+  milano: ${MILANO_URI}
+
+

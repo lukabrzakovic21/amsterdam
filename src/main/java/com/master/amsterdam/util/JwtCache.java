@@ -39,7 +39,7 @@ public class JwtCache {
             var headers = new HttpHeaders();
             headers.setBearerAuth(jwt);
             HttpEntity<String> httpEntity = new HttpEntity<>("some body", headers);
-            var exchange = restTemplate.exchange("http://localhost:8080/jwt/valid", HttpMethod.GET, httpEntity, Boolean.class);
+            var exchange = restTemplate.exchange("http://alexandria:8080/jwt/valid", HttpMethod.GET, httpEntity, Boolean.class);
             return exchange.getBody();
         } catch (Exception exception) {
             logger.warn("Downstream service is down");
