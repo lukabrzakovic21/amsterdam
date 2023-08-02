@@ -39,8 +39,12 @@ public class ErrorResponseAttributes extends DefaultErrorAttributes {
                 .map(exceptionRule -> exceptionRule.exceptionClass().isInstance(error) ? exceptionRule : null)
                 .filter(Objects::nonNull)
                 .findFirst();
-        return exceptionRuleOptional.<Map<String, Object>>map(exceptionRule -> Map.of("status", exceptionRule.status().value(), "message", error.getMessage(),  "timestamp", timestamp))
-                .orElseGet(() -> Map.of("status", determineHttpStatus(error).value(),  "message", error.getMessage(), "timestamp", timestamp));
+        return exceptionRuleOptional.<Map<String, Object>>map(exceptionRule ->
+                        Map.of("status", exceptionRule.status().value(),
+                                "message", error.getMessage(),  "timestamp", timestamp))
+                .orElseGet(() ->
+                        Map.of("status", determineHttpStatus(error).value(),
+                        "message", error.getMessage(), "timestamp", timestamp));
 
     }
 

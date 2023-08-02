@@ -25,4 +25,7 @@ uris:
   alexandria: ${ALEXANDRIA_URI}
   milano: ${MILANO_URI}
 
+secret:
+  key: ${SECRET_KEY}
+
 
